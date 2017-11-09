@@ -1,21 +1,22 @@
-lettersArray = [];
-lettersArray2 = [];
+var lettersArray = [];
+var lettersArray2 = [];
 
 var leapYear = function(str) {
   var words = str.split(" ");
   words.forEach(function(word) {
-    debugger;
-    caps = word[0].toUpperCase();
+    var checker = 0;
+    // debugger;
+    caps = word[0];
     var letters = word.split("");
     letters.forEach(function(letter) {
-      debugger;
-      var wordLength = letters.length - 1;
-      console.log(wordLength);
+      checker +=1;
+      // debugger;
+      var wordLength = letters.length;
       if (letter != letters[0]) {
         lettersArray.push(letter);
-        console.log(lettersArray);
       }
-      if (letter === letters[wordLength]) {
+      console.log(checker);
+      if (checker === wordLength) {
         lettersArray.push(caps);
         lettersArray.push("ay ");
       }
